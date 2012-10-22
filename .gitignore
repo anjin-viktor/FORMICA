@@ -1,0 +1,14 @@
+trunk/src/CMakeCache.txt
+trunk/src/CMakeFiles/
+trunk/src/CTestTestfile.cmake
+trunk/src/Makefile
+trunk/src/Testing/
+trunk/src/cmake_install.cmake
+trunk/src/libformica_lib.a
+trunk/unit_tests/CMakeCache.txt
+trunk/unit_tests/CMakeFiles/
+trunk/unit_tests/CTestTestfile.cmake
+trunk/unit_tests/FORMICA_UNIT_TESTS
+trunk/unit_tests/Makefile
+trunk/unit_tests/Testing/
+trunk/unit_tests/cmake_install.cmake
