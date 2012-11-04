@@ -10,13 +10,19 @@ set (PROJECT_LIB ${PROJECT}_lib)
 project (${PROJECT})
 
 set (LIB_SOURCES
-	FormicaLexer.cpp
+	AbstractNode.cpp
 	)
 
+
+set (GMP_LIBS
+	gmpxx
+)
 
 set (Boost_USE_STATIC_LIBS ON)
 
 add_library (${PROJECT_LIB} STATIC ${LIB_SOURCES})
+
+target_link_libraries(${PROJECT_LIB} ${GMP_LIBS})
 
 include_directories(${Boost_INCLUDE_DIRS})
 

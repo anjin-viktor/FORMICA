@@ -5,7 +5,7 @@ project (${TEST})
 
  
 set (SOURCES
-	FormicaLexerTest.cpp
+	AbstractNodeTest.cpp
 	UnitTestMain.cpp
 	)
  
