@@ -23,7 +23,7 @@ class AbstractNode
 /**
 Getting result of execution expression or value of variable or constant
 */
-		virtual mpf_class getValue() const;
+		virtual mpf_class getValue();
 		virtual void exec();
 
 	protected:

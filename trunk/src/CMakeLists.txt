@@ -12,6 +12,7 @@ project (${PROJECT})
 set (LIB_SOURCES
 	AbstractNode.cpp
 	ConstantNode.cpp
+	VariableNode.cpp
 	)
 
 

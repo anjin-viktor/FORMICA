@@ -7,6 +7,7 @@ project (${TEST})
 set (SOURCES
 	AbstractNodeTest.cpp
 	ConstantNodeTest.cpp
+	VariableNodeTest.cpp
 	UnitTestMain.cpp
 	)
  

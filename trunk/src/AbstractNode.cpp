@@ -12,7 +12,7 @@ AbstractNode::~AbstractNode()
 
 
 
-mpf_class AbstractNode::getValue() const
+mpf_class AbstractNode::getValue()
 {
 	return m_value;
 }
