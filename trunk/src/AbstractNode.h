@@ -10,7 +10,7 @@
 
 /**
 @class AbstractNode
-@brief AbstractNode is a class for representation node in executions tree
+@brief AbstractNode is a class for representation node in execution tree
 */
 
 
@@ -26,7 +26,7 @@ Getting result of execution expression or value of variable or constant
 		virtual mpf_class getValue() const;
 		virtual void exec();
 
-	private:
+	protected:
 		mpf_class		m_value;
 };
 
