@@ -9,6 +9,7 @@ set (SOURCES
 	ConstantNodeTest.cpp
 	VariableNodeTest.cpp
 	OperatorNodeTest.cpp
+	ExecutionTreeTest.cpp
 	UnitTestMain.cpp
 	)
  

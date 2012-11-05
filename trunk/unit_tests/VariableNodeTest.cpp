@@ -36,6 +36,12 @@ BOOST_AUTO_TEST_CASE(test_2)
 	node1.setName("b");
 	BOOST_CHECK_EQUAL(node1.getValue(), 0);
 
+	node1.setValue(125.0);
+	BOOST_CHECK_EQUAL(varTable["b"], 125.0);
+
+	node1.setName("c");
+	node1.setValue(300.0);
+	BOOST_CHECK_EQUAL(varTable["c"], 300.0);
 }
 
 BOOST_AUTO_TEST_SUITE_END();

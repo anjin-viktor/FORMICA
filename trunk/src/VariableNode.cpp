@@ -59,3 +59,12 @@ mpf_class VariableNode::getValue()
 
 	return m_value;
 }
+
+
+
+
+void VariableNode::setValue(const mpf_class &val)
+{
+	AbstractNode::setValue(val);
+	m_pvarTable -> operator[](m_name) = val;
+}

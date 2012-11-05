@@ -1,5 +1,5 @@
-#ifndef CONSTANT_NODE_H_
-#define CONSTANT_NODE_H_
+#ifndef VARIABLE_NODE_H_
+#define VARIABLE_NODE_H_
 
 /**
 @file ConstantNode.h
@@ -42,6 +42,7 @@ Setting pointer to variable table for this node
 		void setVarTablePtr(std::map<std::string, mpf_class> *);
 
 		virtual mpf_class getValue();
+		virtual void setValue(const mpf_class &);
 
 	private:
 		std::string							m_name;

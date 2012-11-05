@@ -24,7 +24,7 @@ namespace Operator
 		SUB,
 		MUL,
 		DIV,
-		ASS,
+		ASSIGN,
 		NONE
 	};
 
@@ -37,7 +37,7 @@ namespace Operator
 @brief OperatorNode is a class for representation operators as nodes execution tree
 */
 
-class OperatorNode
+class OperatorNode: public AbstractNode
 {
 	public:
 		OperatorNode();
@@ -46,6 +46,8 @@ class OperatorNode
 
 		void setOperator(Operator::Type type);
 		Operator::Type getOperator() const;
+
+		void exec();
 
 	private:
 		Operator::Type 		m_op;
