@@ -19,6 +19,7 @@ mpf_class AbstractNode::getValue()
 
 
 
-void AbstractNode::exec()
+void AbstractNode::setValue(const mpf_class &val)
 {
+	m_value = val;
 }

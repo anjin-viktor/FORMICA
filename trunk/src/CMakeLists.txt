@@ -13,6 +13,7 @@ set (LIB_SOURCES
 	AbstractNode.cpp
 	ConstantNode.cpp
 	VariableNode.cpp
+	OperatorNode.cpp
 	)
 
 

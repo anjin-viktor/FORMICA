@@ -52,8 +52,10 @@ mpf_class VariableNode::getValue()
 	if(itr == m_pvarTable -> end())
 	{
 		m_pvarTable -> insert(std::pair<std::string, mpf_class> (m_name, mpf_class(0, 1024)));
-		return m_pvarTable -> find(m_name) -> second;
+		m_value = m_pvarTable -> find(m_name) -> second;
 	}
 	else
-		return itr -> second;
+		m_value = itr -> second;
+
+	return m_value;
 }

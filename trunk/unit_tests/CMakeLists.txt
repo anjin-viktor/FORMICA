@@ -8,6 +8,7 @@ set (SOURCES
 	AbstractNodeTest.cpp
 	ConstantNodeTest.cpp
 	VariableNodeTest.cpp
+	OperatorNodeTest.cpp
 	UnitTestMain.cpp
 	)
  
