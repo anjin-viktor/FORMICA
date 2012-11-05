@@ -12,3 +12,10 @@ trunk/unit_tests/FORMICA_UNIT_TESTS
 trunk/unit_tests/Makefile
 trunk/unit_tests/Testing/
 trunk/unit_tests/cmake_install.cmake
+trunk/build/
+trunk/Testing/
+trunk/CMakeCache.txt
+trunk/CMakeFiles/
+trunk/CTestTestfile.cmake
+trunk/Makefile
+trunk/cmake_install.cmake
