@@ -6,6 +6,8 @@
 */
 
 #include <list>
+#include <map>
+#include <string>
 
 #include <boost/shared_ptr.hpp>
 
@@ -48,7 +50,7 @@ Getting pointer to parent for this node
 		boost::shared_ptr<AbstractNode> getParent() const;
 
 
-		virtual void exec();
+		virtual void exec(std::map<std::string, mpf_class> *);
 
 	protected:
 		mpf_class										m_value;

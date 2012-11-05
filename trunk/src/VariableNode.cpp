@@ -68,3 +68,13 @@ void VariableNode::setValue(const mpf_class &val)
 	AbstractNode::setValue(val);
 	m_pvarTable -> operator[](m_name) = val;
 }
+
+
+
+
+void VariableNode::exec(std::map<std::string, mpf_class> *varTab)
+{
+	setVarTablePtr(varTab);
+	AbstractNode::exec(varTab);
+}
+

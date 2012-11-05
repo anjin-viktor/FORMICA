@@ -36,9 +36,9 @@ Operator::Type OperatorNode::getOperator() const
 #include <iostream>
 
 
-void OperatorNode::exec()
+void OperatorNode::exec(std::map<std::string, mpf_class> *varTab)
 {
-	AbstractNode::exec();
+	AbstractNode::exec(varTab);
 
 	switch(m_op)
 	{

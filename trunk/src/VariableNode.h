@@ -44,6 +44,8 @@ Setting pointer to variable table for this node
 		virtual mpf_class getValue();
 		virtual void setValue(const mpf_class &);
 
+		virtual void exec(std::map<std::string, mpf_class> *);
+
 	private:
 		std::string							m_name;
 		std::map<std::string, mpf_class>	*m_pvarTable;

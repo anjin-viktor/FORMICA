@@ -47,7 +47,7 @@ class OperatorNode: public AbstractNode
 		void setOperator(Operator::Type type);
 		Operator::Type getOperator() const;
 
-		void exec();
+		void exec(std::map<std::string, mpf_class> *);
 
 	private:
 		Operator::Type 		m_op;

@@ -59,7 +59,7 @@ BOOST_AUTO_TEST_CASE(test_1)
 	op1 -> addOperand(op4);
 
 	tree.root() -> addOperand(op1);
-	tree.root() -> exec();
+	tree.root() -> exec(&varTable);
 
 	BOOST_CHECK_EQUAL(op3 -> getValue(), 10);
 	BOOST_CHECK_EQUAL(op4 -> getValue(), 25);
@@ -99,10 +99,57 @@ BOOST_AUTO_TEST_CASE(test_2)
 
 
 	tree.root() -> addOperand(op2);
-	tree.root() -> exec();
+	tree.root() -> exec(&varTable);
 
 	BOOST_CHECK_EQUAL(op3 -> getValue(), -14.05);
 	BOOST_CHECK_EQUAL(varTable["d"], -14.05);
+}
+
+
+
+
+
+
+BOOST_AUTO_TEST_CASE(test_3)
+{
+	ExecutionTree tree;
+
+	std::map<std::string, mpf_class> varTable;
+
+
+	boost::shared_ptr<AbstractNode> op1(new ConstantNode(1));
+	boost::shared_ptr<AbstractNode> op2(new ConstantNode(2));
+
+	boost::shared_ptr<AbstractNode> op3(new OperatorNode(Operator::ADD));
+	op3 -> addOperand(op1);
+	op3 -> addOperand(op2);
+
+	op1 = boost::shared_ptr<AbstractNode>(new VariableNode("b"));
+	op2 = boost::shared_ptr<AbstractNode>(new OperatorNode(Operator::ASSIGN));
+	op2 -> addOperand(op1);
+	op2 -> addOperand(op3);
+	tree.root() -> addOperand(op2);
+
+
+
+	op1 = boost::shared_ptr<AbstractNode>(new ConstantNode(1));
+	op2 = boost::shared_ptr<AbstractNode>(new ConstantNode(2));
+
+	op3 = boost::shared_ptr<AbstractNode>(new OperatorNode(Operator::MUL));
+	op3 -> addOperand(op1);
+	op3 -> addOperand(op2);
+
+	op1 = boost::shared_ptr<AbstractNode>(new VariableNode("c"));
+	op2 = boost::shared_ptr<AbstractNode>(new OperatorNode(Operator::ASSIGN));
+	op2 -> addOperand(op1);
+	op2 -> addOperand(op3);
+	tree.root() -> addOperand(op2);
+
+	tree.root() -> exec(&varTable);
+
+	BOOST_CHECK_EQUAL(varTable["b"], 3);
+	BOOST_CHECK_EQUAL(varTable["c"], 2);
+
 }
 
 

@@ -49,10 +49,10 @@ boost::shared_ptr<AbstractNode> AbstractNode::getParent() const
 
 
 
-void AbstractNode::exec()
+void AbstractNode::exec(std::map<std::string, mpf_class> *varTab)
 {
 	std::list<boost::shared_ptr<AbstractNode> >::iterator itr = m_operands.begin();
 
 	for(; itr != m_operands.end(); itr++)
-		(*itr) -> exec();
+		(*itr) -> exec(varTab);
 }
