@@ -10,6 +10,7 @@ set (SOURCES
 	VariableNodeTest.cpp
 	OperatorNodeTest.cpp
 	ExecutionTreeTest.cpp
+	FunctionTest.cpp
 	UnitTestMain.cpp
 	)
  

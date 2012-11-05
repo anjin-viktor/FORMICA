@@ -15,6 +15,7 @@ set (LIB_SOURCES
 	VariableNode.cpp
 	OperatorNode.cpp
 	ExecutionTree.cpp
+	Function.cpp
 	)
 
 
